@@ -22,19 +22,7 @@ class ArticleListViewControllerTests: XCTestCase {
         
         XCTAssertEqual(vc.titleLabel.text, "記事タイトル")
     }
-    
-    func test_タイトル２が表示されること() {
-        let article = Article(title: "記事タイトル２")
-        let client = FakeArticleListAPIClient(fakeResponse: [article])
-        let vc = ArticleListViewController(client: client)
-
-        let window = UIWindow()
-        window.rootViewController = vc
-        window.makeKeyAndVisible()
         
-        XCTAssertEqual(vc.titleLabel.text, "記事タイトル２")
-    }
-    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
