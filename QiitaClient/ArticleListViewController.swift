@@ -12,6 +12,8 @@ class ArticleListViewController: UIViewController {
     
     let titleLabel = UILabel()
     let client: ArticleListAPIClientProtocol
+    let tableView = UITableView()
+    var items: [Article] = []
     
     init(client: ArticleListAPIClientProtocol = ArticleListAPIClient()) {
         self.client = client
@@ -37,12 +39,47 @@ class ArticleListViewController: UIViewController {
             .constraint(equalTo: view.leftAnchor, constant: 16)
             .isActive = true
         
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(tableView)
+        tableView.rightAnchor
+            .constraint(equalTo: view.rightAnchor)
+            .isActive = true
+        tableView.topAnchor
+            .constraint(equalTo: view.safeAreaLayoutGuide.topAnchor)
+            .isActive = true
+        tableView.leftAnchor
+            .constraint(equalTo: view.leftAnchor)
+            .isActive = true
+        tableView.bottomAnchor
+            .constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            .isActive = true
+        
+        tableView.dataSource = self
+        tableView.register(ArticleListCell.self, forCellReuseIdentifier: "ArticleListCell")
+        
         client.fetch { [weak self] (articleList) in
             guard
                 let articleList = articleList,
                 0 < articleList.count else { return }
             
-            self?.titleLabel.text = articleList[0].title
+            self?.items = articleList
+            self?.tableView.reloadData()
         }
+    }
+}
+
+extension ArticleListViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ArticleListCell") as! ArticleListCell
+        
+        let article = items[indexPath.row]
+        cell.titleLabel.text = article.title
+        
+        return cell
     }
 }

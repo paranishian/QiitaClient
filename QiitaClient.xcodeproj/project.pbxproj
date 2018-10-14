@@ -17,6 +17,7 @@
 		C12CEC52217312AA001D9812 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC51217312AA001D9812 /* Article.swift */; };
 		C12CEC54217312E4001D9812 /* ArticleListAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */; };
 		C12CEC5621731459001D9812 /* ArticleListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */; };
+		C12CEC5821731A69001D9812 /* ArticleListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC5721731A69001D9812 /* ArticleListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C12CEC51217312AA001D9812 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAPIClientProtocol.swift; sourceTree = "<group>"; };
 		C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAPIClient.swift; sourceTree = "<group>"; };
+		C12CEC5721731A69001D9812 /* ArticleListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				C12CEC4D21730E19001D9812 /* ArticleListViewController.swift */,
 				C12CEC51217312AA001D9812 /* Article.swift */,
 				C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */,
+				C12CEC5721731A69001D9812 /* ArticleListCell.swift */,
 				C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */,
 			);
 			path = QiitaClient;
@@ -268,6 +271,7 @@
 				C12CEC2021730D95001D9812 /* AppDelegate.swift in Sources */,
 				C12CEC5621731459001D9812 /* ArticleListAPIClient.swift in Sources */,
 				C12CEC4E21730E19001D9812 /* ArticleListViewController.swift in Sources */,
+				C12CEC5821731A69001D9812 /* ArticleListCell.swift in Sources */,
 				C12CEC52217312AA001D9812 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
