@@ -10,7 +10,6 @@ import UIKit
 
 class ArticleListViewController: UIViewController {
     
-    let titleLabel = UILabel()
     let client: ArticleListAPIClientProtocol
     let tableView = UITableView()
     var items: [Article] = []
@@ -29,15 +28,6 @@ class ArticleListViewController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(titleLabel)
-        titleLabel.topAnchor
-            .constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16)
-            .isActive = true
-        titleLabel.leftAnchor
-            .constraint(equalTo: view.leftAnchor, constant: 16)
-            .isActive = true
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
