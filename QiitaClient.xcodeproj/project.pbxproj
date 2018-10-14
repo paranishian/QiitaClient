@@ -13,6 +13,10 @@
 		C12CEC3521730D97001D9812 /* QiitaClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC3421730D97001D9812 /* QiitaClientTests.swift */; };
 		C12CEC4021730D97001D9812 /* QiitaClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC3F21730D97001D9812 /* QiitaClientUITests.swift */; };
 		C12CEC4E21730E19001D9812 /* ArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC4D21730E19001D9812 /* ArticleListViewController.swift */; };
+		C12CEC5021730ECB001D9812 /* ArticleListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC4F21730ECB001D9812 /* ArticleListViewControllerTests.swift */; };
+		C12CEC52217312AA001D9812 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC51217312AA001D9812 /* Article.swift */; };
+		C12CEC54217312E4001D9812 /* ArticleListAPIClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */; };
+		C12CEC5621731459001D9812 /* ArticleListAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		C12CEC3F21730D97001D9812 /* QiitaClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaClientUITests.swift; sourceTree = "<group>"; };
 		C12CEC4121730D97001D9812 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C12CEC4D21730E19001D9812 /* ArticleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewController.swift; sourceTree = "<group>"; };
+		C12CEC4F21730ECB001D9812 /* ArticleListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListViewControllerTests.swift; sourceTree = "<group>"; };
+		C12CEC51217312AA001D9812 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAPIClientProtocol.swift; sourceTree = "<group>"; };
+		C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +108,9 @@
 				C12CEC2821730D97001D9812 /* LaunchScreen.storyboard */,
 				C12CEC2B21730D97001D9812 /* Info.plist */,
 				C12CEC4D21730E19001D9812 /* ArticleListViewController.swift */,
+				C12CEC51217312AA001D9812 /* Article.swift */,
+				C12CEC5521731459001D9812 /* ArticleListAPIClient.swift */,
+				C12CEC53217312E4001D9812 /* ArticleListAPIClientProtocol.swift */,
 			);
 			path = QiitaClient;
 			sourceTree = "<group>";
@@ -109,6 +120,7 @@
 			children = (
 				C12CEC3421730D97001D9812 /* QiitaClientTests.swift */,
 				C12CEC3621730D97001D9812 /* Info.plist */,
+				C12CEC4F21730ECB001D9812 /* ArticleListViewControllerTests.swift */,
 			);
 			path = QiitaClientTests;
 			sourceTree = "<group>";
@@ -252,8 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C12CEC54217312E4001D9812 /* ArticleListAPIClientProtocol.swift in Sources */,
 				C12CEC2021730D95001D9812 /* AppDelegate.swift in Sources */,
+				C12CEC5621731459001D9812 /* ArticleListAPIClient.swift in Sources */,
 				C12CEC4E21730E19001D9812 /* ArticleListViewController.swift in Sources */,
+				C12CEC52217312AA001D9812 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C12CEC3521730D97001D9812 /* QiitaClientTests.swift in Sources */,
+				C12CEC5021730ECB001D9812 /* ArticleListViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
