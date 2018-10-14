@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ArticleListViewController: UIViewController {
     
@@ -45,6 +46,7 @@ class ArticleListViewController: UIViewController {
             .isActive = true
         
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(ArticleListCell.self, forCellReuseIdentifier: "ArticleListCell")
         
         client.fetch { [weak self] (articleList) in
@@ -71,5 +73,14 @@ extension ArticleListViewController: UITableViewDataSource {
         cell.titleLabel.text = article.title
         
         return cell
+    }
+}
+
+extension ArticleListViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let url = URL(string: items[indexPath.row].url) else { return }
+        
+        let safariViewController = SFSafariViewController(url: url)
+        present(safariViewController, animated: true, completion: nil)
     }
 }
