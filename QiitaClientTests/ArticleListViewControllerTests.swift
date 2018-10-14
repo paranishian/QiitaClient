@@ -12,10 +12,15 @@ import SafariServices
 
 class ArticleListViewControllerTests: XCTestCase {
     
-    func test_タイトルの一覧が表示されること() {
+    var vc: ArticleListViewController!
+    
+    override func setUp() {
         let article = Article(title: "記事タイトル", url: "http://test")
         let client = FakeArticleListAPIClient(fakeResponse: [article])
-        let vc = ArticleListViewController(client: client)
+        vc = ArticleListViewController(client: client)
+    }
+    
+    func test_タイトルの一覧が表示されること() {
         let window = UIWindow()
         window.rootViewController = vc
         window.makeKeyAndVisible()
@@ -32,10 +37,6 @@ class ArticleListViewControllerTests: XCTestCase {
     }
     
     func test_記事をタップして詳細画面が表示されること() {
-        let article = Article(title: "記事タイトル", url: "http://test")
-        let client = FakeArticleListAPIClient(fakeResponse: [article])
-        let vc = ArticleListViewController(client: client)
-        
         let window = UIWindow()
         window.rootViewController = vc
         window.makeKeyAndVisible()
@@ -45,10 +46,6 @@ class ArticleListViewControllerTests: XCTestCase {
         XCTAssertTrue(vc.presentedViewController is SFSafariViewController)
     }
         
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
